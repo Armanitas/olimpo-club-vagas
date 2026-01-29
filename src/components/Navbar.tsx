@@ -17,7 +17,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-olimpo-dark/95 backdrop-blur-md border-b border-olimpo-gold/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-olimpo-cream/95 backdrop-blur-md border-b border-olimpo-gold/20">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -35,7 +35,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-olimpo-cream/70 hover:text-olimpo-gold transition-colors duration-300 text-sm font-medium tracking-wide"
+                className="text-olimpo-dark/70 hover:text-olimpo-gold transition-colors duration-300 text-sm font-medium tracking-wide"
               >
                 {link.label}
               </a>
@@ -62,9 +62,9 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className="w-6 h-6 text-olimpo-cream" />
+              <X className="w-6 h-6 text-olimpo-dark" />
             ) : (
-              <Menu className="w-6 h-6 text-olimpo-cream" />
+              <Menu className="w-6 h-6 text-olimpo-dark" />
             )}
           </button>
         </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-olimpo-cream/70 hover:text-olimpo-gold transition-colors duration-300 text-base font-medium py-2"
+                  className="text-olimpo-dark/70 hover:text-olimpo-gold transition-colors duration-300 text-base font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
