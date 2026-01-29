@@ -21,15 +21,19 @@ const InsightsSection = () => {
               Insights diários e operações em{" "}
               <span className="text-olimpo-gold">tempo real</span>
             </h2>
-            <p className="text-olimpo-cream/70 text-lg mb-8 leading-relaxed">
+            <p className="text-olimpo-cream/70 text-lg mb-4 leading-relaxed">
               Todos os dias você recebe análises, ideias de trade e leituras de mercado de diferentes especialistas. 
-              Um fluxo contínuo de informações para você tomar decisões melhores.
+              Um fluxo contínuo de informações com pontos claros de entrada, saída e invalidação.
+            </p>
+            
+            <p className="text-olimpo-gold font-medium text-base mb-8 italic border-l-2 border-olimpo-gold pl-4">
+              "Você nunca opera sozinho: o mercado é acompanhado em conjunto todos os dias."
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="gold" size="lg" asChild>
                 <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
-                  Quero acessar os insights
+                  Entrar na comunidade agora
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>

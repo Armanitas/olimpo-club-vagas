@@ -1,4 +1,5 @@
-import { Shield, Users, Lock, Award } from "lucide-react";
+import { Shield, Users, Lock, Award, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ExclusivitySection = () => {
   return (
@@ -39,13 +40,26 @@ const ExclusivitySection = () => {
             ))}
           </div>
           
-          <div className="relative">
+          {/* Impact Phrase */}
+          <p className="text-olimpo-cream/70 text-lg mb-8">
+            Poucas vagas, mais foco, mais qualidade nas análises e interações.
+          </p>
+          
+          <div className="relative mb-10">
             <div className="absolute inset-0 bg-gradient-to-r from-olimpo-gold/0 via-olimpo-gold/20 to-olimpo-gold/0 h-[1px] top-1/2" />
             <blockquote className="font-display text-2xl md:text-3xl text-olimpo-cream italic relative bg-olimpo-dark px-8 inline-block">
               "Você não está entrando em um grupo, está entrando em um{" "}
               <span className="text-olimpo-gold">ecossistema de evolução</span>."
             </blockquote>
           </div>
+          
+          {/* CTA Button */}
+          <Button variant="gold" size="lg" asChild>
+            <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
+              Entrar na comunidade agora
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>

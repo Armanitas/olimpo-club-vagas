@@ -73,10 +73,13 @@ const MentoriaSection = () => {
             <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
               Programa Avançado
             </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-4">
               Mentoria{" "}
               <span className="text-olimpo-gold">Equilibrium</span>
             </h2>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-olimpo-gold/30 bg-olimpo-gold/5 mb-6">
+              <span className="text-sm text-olimpo-cream/80 font-medium">Para quem quer operar com autonomia</span>
+            </div>
             
             <p className="text-xl text-olimpo-cream/90 mb-6 font-display italic border-l-4 border-olimpo-gold pl-6">
               "Do acompanhamento à autonomia para operar com consistência."

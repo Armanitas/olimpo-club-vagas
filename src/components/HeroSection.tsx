@@ -42,9 +42,12 @@ const HeroSection = () => {
               </Button>
             </div>
             
-            <p className="text-sm text-olimpo-cream/50 mt-6 italic">
-              Vagas abertas apenas em períodos limitados do ano
-            </p>
+            <div className="mt-8 flex items-center justify-center lg:justify-start gap-3 px-4 py-3 rounded-lg bg-olimpo-gold/10 border border-olimpo-gold/20 max-w-fit">
+              <div className="w-2 h-2 rounded-full bg-olimpo-gold animate-pulse" />
+              <p className="text-sm text-olimpo-gold font-medium">
+                Entradas limitadas e abertas apenas em períodos específicos do ano.
+              </p>
+            </div>
           </div>
           
           {/* Hero Image */}

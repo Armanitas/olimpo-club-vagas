@@ -34,7 +34,7 @@ const CalendarSection = () => {
             Encontros ao vivo para leitura de mercado, cenários e oportunidades.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {calls.map((call, index) => (
             <div
@@ -76,6 +76,11 @@ const CalendarSection = () => {
             </div>
           ))}
         </div>
+        
+        {/* Additional Text */}
+        <p className="text-center text-olimpo-cream/70 text-lg max-w-3xl mx-auto mt-10 leading-relaxed">
+          Toda semana você tem encontros ao vivo para ajustar sua leitura de mercado e alinhar os próximos movimentos.
+        </p>
       </div>
     </section>
   );
