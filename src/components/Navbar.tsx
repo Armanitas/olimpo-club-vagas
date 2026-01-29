@@ -5,11 +5,12 @@ import logoOlimpo from "@/assets/logo-olimpo.jpg";
 
 const navLinks = [
   { href: "#inicio", label: "Início" },
-  { href: "#mentoria", label: "Mentoria Equilibrium" },
+  { href: "#beneficios", label: "Benefícios" },
   { href: "#insights", label: "Insights" },
-  { href: "#depoimentos", label: "Depoimentos" },
+  { href: "#mentoria", label: "Mentoria" },
   { href: "#precos", label: "Preços" },
-  { href: "#sobre", label: "Sobre o Olimpo" },
+  { href: "#depoimentos", label: "Depoimentos" },
+  { href: "#sobre", label: "Sobre" },
 ];
 
 const Navbar = () => {
