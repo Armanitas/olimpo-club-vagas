@@ -52,7 +52,7 @@ const AboutSection = () => {
               <div className="bg-gradient-to-br from-olimpo-gold/10 to-olimpo-gold/5 rounded-2xl p-8 border border-olimpo-gold/20">
                 <div className="text-center">
                   {/* Logo */}
-                  <div className="w-40 h-40 rounded-full bg-olimpo-dark border-4 border-olimpo-gold/30 flex items-center justify-center mx-auto mb-6 overflow-hidden">
+                  <div className="w-40 h-40 rounded-full bg-olimpo-cream border-4 border-olimpo-gold/30 flex items-center justify-center mx-auto mb-6 overflow-hidden">
                     <img 
                       src={logoOlimpo} 
                       alt="Olimpo" 
