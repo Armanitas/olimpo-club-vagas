@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logoOlimpo from "@/assets/logo-olimpo.jpg";
+import logoOlimpo from "@/assets/logo-olimpo-new.png";
 
 const navLinks = [
   { href: "#inicio", label: "Início" },
