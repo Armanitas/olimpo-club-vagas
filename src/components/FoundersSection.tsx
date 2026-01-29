@@ -60,7 +60,7 @@ const FoundersSection = () => {
           <img 
             src={logoOlimpoEquilibrium} 
             alt="Olimpo x Equilibrium" 
-            className="h-20 md:h-24 mx-auto mb-8 object-contain"
+            className="h-40 md:h-48 mx-auto mb-8 object-contain rounded-2xl"
           />
           <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
             Quem Somos
