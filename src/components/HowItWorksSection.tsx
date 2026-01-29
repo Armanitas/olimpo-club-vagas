@@ -23,7 +23,7 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-24 section-light relative overflow-hidden">
+    <section className="py-24 section-dark relative overflow-hidden">
       <div className="absolute inset-0 geometric-pattern opacity-30" />
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -31,7 +31,7 @@ const HowItWorksSection = () => {
           <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
             Simples e Direto
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-dark mb-6">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
             Como funciona entrar no <span className="gold-gradient-text">Olimpo</span>
           </h2>
         </div>
@@ -44,9 +44,9 @@ const HowItWorksSection = () => {
                 <div className="hidden md:block absolute top-16 left-[60%] w-full h-[2px] bg-gradient-to-r from-olimpo-gold to-olimpo-gold/20" />
               )}
               
-              <div className="relative bg-white rounded-2xl p-8 shadow-xl border border-olimpo-gold/10 hover-lift text-center">
+              <div className="relative bg-olimpo-dark-card rounded-2xl p-8 border border-olimpo-gold/10 hover-lift text-center">
                 {/* Step Number */}
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-olimpo-gold text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-olimpo-gold text-olimpo-dark flex items-center justify-center font-bold text-lg shadow-lg">
                   {step.number}
                 </div>
                 
@@ -55,10 +55,10 @@ const HowItWorksSection = () => {
                     <step.icon className="w-8 h-8 text-olimpo-gold" />
                   </div>
                   
-                  <h3 className="font-display text-xl font-bold text-olimpo-dark mb-3">
+                  <h3 className="font-display text-xl font-bold text-olimpo-cream mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-olimpo-dark/60">
+                  <p className="text-olimpo-cream/60">
                     {step.description}
                   </p>
                 </div>

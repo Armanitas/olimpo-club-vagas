@@ -13,7 +13,7 @@ const calls = [
     time: "20h00",
     title: "Call de Análise Macro",
     description: "Visão macroeconômica e cenários globais",
-    color: "bg-olimpo-dark",
+    color: "bg-olimpo-cream",
   },
 ];
 
@@ -27,10 +27,10 @@ const CalendarSection = () => {
           <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
             Encontros ao Vivo
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-dark mb-6">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
             Calendário de <span className="gold-gradient-text">Calls</span>
           </h2>
-          <p className="text-olimpo-dark/60 text-lg max-w-2xl mx-auto">
+          <p className="text-olimpo-cream/60 text-lg max-w-2xl mx-auto">
             Encontros ao vivo para leitura de mercado, cenários e oportunidades.
           </p>
         </div>
@@ -39,39 +39,39 @@ const CalendarSection = () => {
           {calls.map((call, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-2xl p-8 shadow-xl border border-olimpo-gold/10 hover-lift group"
+              className="relative bg-olimpo-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-olimpo-gold/10 hover-lift group"
             >
               {/* Accent Line */}
               <div className={`absolute top-0 left-0 right-0 h-1 ${call.color} rounded-t-2xl`} />
               
               <div className="flex items-start gap-4">
-                <div className={`w-16 h-16 rounded-xl ${call.color === "bg-olimpo-gold" ? "bg-olimpo-gold/10" : "bg-olimpo-dark/10"} flex items-center justify-center flex-shrink-0`}>
-                  <Video className={`w-8 h-8 ${call.color === "bg-olimpo-gold" ? "text-olimpo-gold" : "text-olimpo-dark"}`} />
+                <div className={`w-16 h-16 rounded-xl ${call.color === "bg-olimpo-gold" ? "bg-olimpo-gold/10" : "bg-olimpo-cream/10"} flex items-center justify-center flex-shrink-0`}>
+                  <Video className={`w-8 h-8 ${call.color === "bg-olimpo-gold" ? "text-olimpo-gold" : "text-olimpo-cream"}`} />
                 </div>
                 
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     <Calendar className="w-4 h-4 text-olimpo-gold" />
-                    <span className="text-sm font-medium text-olimpo-dark/70">{call.day}</span>
+                    <span className="text-sm font-medium text-olimpo-cream/70">{call.day}</span>
                   </div>
                   <div className="flex items-center gap-2 mb-3">
                     <Clock className="w-4 h-4 text-olimpo-gold" />
-                    <span className="text-sm font-medium text-olimpo-dark/70">{call.time}</span>
+                    <span className="text-sm font-medium text-olimpo-cream/70">{call.time}</span>
                   </div>
                   
-                  <h3 className="font-display text-xl font-bold text-olimpo-dark mb-2">
+                  <h3 className="font-display text-xl font-bold text-olimpo-cream mb-2">
                     {call.title}
                   </h3>
-                  <p className="text-olimpo-dark/60 text-sm">
+                  <p className="text-olimpo-cream/60 text-sm">
                     {call.description}
                   </p>
                 </div>
               </div>
               
               {/* Live Indicator */}
-              <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 rounded-full bg-destructive/10">
-                <div className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
-                <span className="text-xs font-medium text-destructive">AO VIVO</span>
+              <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/20">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-xs font-medium text-green-400">AO VIVO</span>
               </div>
             </div>
           ))}

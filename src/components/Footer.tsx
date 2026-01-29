@@ -1,16 +1,18 @@
 import { Button } from "@/components/ui/button";
+import logoOlimpo from "@/assets/logo-olimpo.jpg";
 
 const footerLinks = [
   { href: "#inicio", label: "Início" },
   { href: "#mentoria", label: "Mentoria Equilibrium" },
   { href: "#insights", label: "Insights" },
+  { href: "#depoimentos", label: "Depoimentos" },
   { href: "#precos", label: "Preços" },
   { href: "#sobre", label: "Sobre o Olimpo" },
 ];
 
 const Footer = () => {
   return (
-    <footer className="py-16 bg-olimpo-dark relative overflow-hidden">
+    <footer className="py-16 bg-olimpo-dark relative overflow-hidden border-t border-olimpo-gold/10">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -25,12 +27,11 @@ const Footer = () => {
           {/* Logo & Tagline */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full border-2 border-olimpo-gold flex items-center justify-center">
-                <span className="font-display text-olimpo-gold text-2xl font-bold">Ω</span>
-              </div>
-              <span className="font-display text-2xl font-semibold text-olimpo-cream tracking-wide">
-                OLIMPO
-              </span>
+              <img 
+                src={logoOlimpo} 
+                alt="Olimpo" 
+                className="h-16 w-auto object-contain"
+              />
             </div>
             <p className="text-olimpo-cream/60 text-sm max-w-xs">
               Uma comunidade de elite para traders que buscam performance real no mercado cripto.

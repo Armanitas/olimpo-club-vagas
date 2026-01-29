@@ -2,27 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 45 14% 91%;
-    --foreground: 0 0% 20%;
+    --background: 220 15% 13%;
+    --foreground: 45 14% 91%;
 
-    --card: 45 14% 91%;
-    --card-foreground: 0 0% 20%;
+    --card: 220 15% 16%;
+    --card-foreground: 45 14% 91%;
 
-    --popover: 45 14% 91%;
-    --popover-foreground: 0 0% 20%;
+    --popover: 220 15% 16%;
+    --popover-foreground: 45 14% 91%;
 
     --primary: 35 52% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 20%;
-    --secondary-foreground: 45 14% 91%;
+    --secondary: 45 14% 91%;
+    --secondary-foreground: 220 15% 13%;
 
-    --muted: 45 10% 85%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 45 10% 60%;
 
     --accent: 35 52% 55%;
     --accent-foreground: 0 0% 100%;
@@ -30,55 +30,35 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 20% 80%;
-    --input: 35 20% 80%;
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
     --ring: 35 52% 55%;
 
     --radius: 0.5rem;
 
     /* Custom Olimpo tokens */
     --olimpo-cream: 45 14% 91%;
-    --olimpo-dark: 0 0% 20%;
+    --olimpo-dark: 220 15% 13%;
+    --olimpo-dark-lighter: 220 15% 18%;
+    --olimpo-dark-card: 220 15% 16%;
     --olimpo-gold: 35 52% 55%;
     --olimpo-gold-light: 35 52% 65%;
     --olimpo-gold-dark: 35 52% 45%;
 
     /* Gradients */
     --gradient-gold: linear-gradient(135deg, hsl(35 52% 55%), hsl(35 52% 45%));
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 20%), hsl(0 0% 15%));
-    --gradient-hero: linear-gradient(180deg, hsl(45 14% 91%) 0%, hsl(45 10% 88%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(220 15% 13%), hsl(220 15% 10%));
+    --gradient-hero: linear-gradient(180deg, hsl(220 15% 13%) 0%, hsl(220 15% 16%) 100%);
 
     /* Shadows */
     --shadow-gold: 0 4px 20px -4px hsl(35 52% 55% / 0.3);
-    --shadow-card: 0 4px 40px -12px hsl(0 0% 20% / 0.1);
-    --shadow-elevated: 0 20px 60px -20px hsl(0 0% 20% / 0.15);
+    --shadow-card: 0 4px 40px -12px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 20px 60px -20px hsl(0 0% 0% / 0.4);
   }
 
   .dark {
-    --background: 0 0% 20%;
+    --background: 220 15% 10%;
     --foreground: 45 14% 91%;
-
-    --card: 0 0% 18%;
-    --card-foreground: 45 14% 91%;
-
-    --popover: 0 0% 18%;
-    --popover-foreground: 45 14% 91%;
-
-    --primary: 35 52% 55%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 45 14% 91%;
-    --secondary-foreground: 0 0% 20%;
-
-    --muted: 0 0% 25%;
-    --muted-foreground: 45 10% 70%;
-
-    --accent: 35 52% 55%;
-    --accent-foreground: 0 0% 100%;
-
-    --border: 0 0% 30%;
-    --input: 0 0% 30%;
-    --ring: 35 52% 55%;
   }
 }
 
@@ -93,21 +73,28 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', sans-serif;
   }
 }
 
 @layer components {
   .section-dark {
-    @apply bg-olimpo-dark text-olimpo-cream;
+    background-color: hsl(var(--olimpo-dark));
+    @apply text-olimpo-cream;
+  }
+
+  .section-dark-alt {
+    background-color: hsl(var(--olimpo-dark-lighter));
+    @apply text-olimpo-cream;
   }
 
   .section-light {
-    @apply bg-olimpo-cream text-olimpo-dark;
+    background-color: hsl(var(--olimpo-dark-card));
+    @apply text-olimpo-cream;
   }
 
   .gold-text {
@@ -123,15 +110,15 @@
 
   .geometric-pattern {
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(35 52% 55% / 0.03) 1px, transparent 1px),
-      radial-gradient(circle at 75% 75%, hsl(35 52% 55% / 0.03) 1px, transparent 1px);
+      radial-gradient(circle at 25% 25%, hsl(35 52% 55% / 0.05) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, hsl(35 52% 55% / 0.05) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
   .golden-ratio-lines {
     background-image: 
-      linear-gradient(90deg, hsl(35 52% 55% / 0.05) 1px, transparent 1px),
-      linear-gradient(0deg, hsl(35 52% 55% / 0.05) 1px, transparent 1px);
+      linear-gradient(90deg, hsl(35 52% 55% / 0.03) 1px, transparent 1px),
+      linear-gradient(0deg, hsl(35 52% 55% / 0.03) 1px, transparent 1px);
     background-size: 61.8px 61.8px;
   }
 }
@@ -225,7 +212,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(45 14% 91%);
+  background: hsl(220 15% 13%);
 }
 
 ::-webkit-scrollbar-thumb {

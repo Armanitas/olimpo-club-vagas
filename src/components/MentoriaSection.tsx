@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Target, Brain, TrendingUp, Compass, ArrowRight } from "lucide-react";
+import logoEquilibrium from "@/assets/logo-equilibrium.png";
 
 const mentoriaFeatures = [
   {
@@ -26,7 +27,7 @@ const mentoriaFeatures = [
 
 const MentoriaSection = () => {
   return (
-    <section id="mentoria" className="py-24 section-dark relative overflow-hidden">
+    <section id="mentoria" className="py-24 section-dark-alt relative overflow-hidden">
       {/* Decorative Greek Column */}
       <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-5">
         <svg viewBox="0 0 200 800" className="h-full w-full">
@@ -46,7 +47,7 @@ const MentoriaSection = () => {
               {mentoriaFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-olimpo-cream/5 backdrop-blur-sm p-6 rounded-xl border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300"
+                  className="group bg-olimpo-dark/50 backdrop-blur-sm p-6 rounded-xl border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300"
                 >
                   <div className="w-12 h-12 rounded-xl bg-olimpo-gold/10 flex items-center justify-center mb-4 group-hover:bg-olimpo-gold/20 transition-colors duration-300">
                     <feature.icon className="w-6 h-6 text-olimpo-gold" />
@@ -64,6 +65,11 @@ const MentoriaSection = () => {
           
           {/* Text Content */}
           <div className="order-1 lg:order-2">
+            <img 
+              src={logoEquilibrium} 
+              alt="Equilibrium" 
+              className="h-20 md:h-24 mb-6 object-contain"
+            />
             <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
               Programa Avançado
             </span>
