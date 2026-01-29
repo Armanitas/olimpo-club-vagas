@@ -10,8 +10,8 @@ const steps = [
   {
     number: "02",
     icon: MessageCircle,
-    title: "Entre na comunidade pelo Discord",
-    description: "Acesse imediatamente todos os canais e conteúdos exclusivos",
+    title: "Entre na comunidade privada no Discord",
+    description: "Você recebe acesso imediato a todos os canais, calls e materiais.",
   },
   {
     number: "03",
