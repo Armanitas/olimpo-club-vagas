@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Crown, Zap, Star } from "lucide-react";
+import { Check, Crown, Zap, Star, ArrowRight } from "lucide-react";
 
 const features = [
   "Acesso às calls semanais",
@@ -133,6 +133,19 @@ const PricingSection = () => {
         <p className="text-center text-olimpo-cream/50 mt-10 text-sm">
           Sem taxas ocultas. Cancele quando quiser.
         </p>
+        
+        {/* Final CTA */}
+        <div className="text-center mt-16 pt-12 border-t border-olimpo-gold/10">
+          <Button variant="gold" size="xl" asChild>
+            <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
+              Entrar na comunidade agora
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </Button>
+          <p className="text-olimpo-cream/60 text-sm mt-4">
+            Comece hoje a operar em um ambiente focado em performance.
+          </p>
+        </div>
       </div>
     </section>
   );
