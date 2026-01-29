@@ -90,7 +90,7 @@ const BenefitsSection = () => {
         <div className="text-center mt-12">
           <Button variant="gold" size="lg" asChild>
             <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
-              Entrar na comunidade agora
+              Entrar na comunidade no Discord
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </Button>
