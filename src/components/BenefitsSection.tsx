@@ -54,10 +54,10 @@ const BenefitsSection = () => {
           <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
             Benefícios Exclusivos
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-dark mb-6">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
             O que você encontra no <span className="gold-gradient-text">Olimpo</span>
           </h2>
-          <p className="text-olimpo-dark/60 text-lg max-w-2xl mx-auto">
+          <p className="text-olimpo-cream/60 text-lg max-w-2xl mx-auto">
             Um ecossistema completo para evoluir no mercado cripto com profissionais experientes.
           </p>
         </div>
@@ -66,16 +66,16 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300 hover-lift"
+              className="group bg-olimpo-dark/50 backdrop-blur-sm p-6 rounded-xl border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300 hover-lift"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-14 h-14 rounded-xl bg-olimpo-gold/10 flex items-center justify-center mb-4 group-hover:bg-olimpo-gold/20 transition-colors duration-300">
                 <benefit.icon className="w-7 h-7 text-olimpo-gold" />
               </div>
-              <h3 className="font-display text-lg font-semibold text-olimpo-dark mb-2">
+              <h3 className="font-display text-lg font-semibold text-olimpo-cream mb-2">
                 {benefit.title}
               </h3>
-              <p className="text-olimpo-dark/60 text-sm">
+              <p className="text-olimpo-cream/60 text-sm">
                 {benefit.description}
               </p>
             </div>

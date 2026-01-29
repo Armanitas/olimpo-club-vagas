@@ -51,10 +51,10 @@ const PricingSection = () => {
           <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
             Investimento
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-dark mb-6">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
             Escolha seu <span className="gold-gradient-text">plano</span>
           </h2>
-          <p className="text-olimpo-dark/60 text-lg max-w-2xl mx-auto">
+          <p className="text-olimpo-cream/60 text-lg max-w-2xl mx-auto">
             Todos os planos incluem acesso completo a toda a estrutura do Olimpo.
           </p>
         </div>
@@ -65,13 +65,13 @@ const PricingSection = () => {
               key={index}
               className={`relative rounded-2xl p-8 hover-lift ${
                 plan.highlight
-                  ? "bg-olimpo-dark text-olimpo-cream border-2 border-olimpo-gold shadow-2xl scale-105 z-10"
-                  : "bg-white text-olimpo-dark border border-olimpo-gold/20 shadow-xl"
+                  ? "bg-olimpo-gold/10 text-olimpo-cream border-2 border-olimpo-gold shadow-2xl scale-105 z-10"
+                  : "bg-olimpo-dark/50 text-olimpo-cream border border-olimpo-gold/20 shadow-xl"
               }`}
             >
               {/* Badge */}
               {plan.badge && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-olimpo-gold text-white px-4 py-1 rounded-full text-xs font-bold">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-olimpo-gold text-olimpo-dark px-4 py-1 rounded-full text-xs font-bold">
                   {plan.badge}
                 </div>
               )}
@@ -80,12 +80,12 @@ const PricingSection = () => {
               <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
                 plan.highlight ? "bg-olimpo-gold/20" : "bg-olimpo-gold/10"
               }`}>
-                <plan.icon className={`w-7 h-7 ${plan.highlight ? "text-olimpo-gold" : "text-olimpo-gold"}`} />
+                <plan.icon className="w-7 h-7 text-olimpo-gold" />
               </div>
               
               {/* Plan Name */}
               <h3 className="font-display text-2xl font-bold mb-2">{plan.name}</h3>
-              <p className={`text-sm mb-6 ${plan.highlight ? "text-olimpo-cream/70" : "text-olimpo-dark/60"}`}>
+              <p className="text-olimpo-cream/60 text-sm mb-6">
                 {plan.description}
               </p>
               
@@ -93,11 +93,11 @@ const PricingSection = () => {
               <div className="mb-6">
                 <span className="text-sm">R$</span>
                 <span className="text-5xl font-bold font-display">{plan.price}</span>
-                <span className={`text-sm ${plan.highlight ? "text-olimpo-cream/70" : "text-olimpo-dark/60"}`}>
+                <span className="text-olimpo-cream/60 text-sm">
                   {plan.period}
                 </span>
                 {plan.fullPrice && (
-                  <p className={`text-sm mt-1 ${plan.highlight ? "text-olimpo-cream/50" : "text-olimpo-dark/50"}`}>
+                  <p className="text-olimpo-cream/50 text-sm mt-1">
                     ou R${plan.fullPrice} à vista
                   </p>
                 )}
@@ -107,8 +107,8 @@ const PricingSection = () => {
               <ul className="space-y-3 mb-8">
                 {features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center gap-3 text-sm">
-                    <Check className={`w-5 h-5 flex-shrink-0 ${plan.highlight ? "text-olimpo-gold" : "text-olimpo-gold"}`} />
-                    <span className={plan.highlight ? "text-olimpo-cream/90" : "text-olimpo-dark/80"}>
+                    <Check className="w-5 h-5 flex-shrink-0 text-olimpo-gold" />
+                    <span className="text-olimpo-cream/80">
                       {feature}
                     </span>
                   </li>
@@ -130,7 +130,7 @@ const PricingSection = () => {
           ))}
         </div>
         
-        <p className="text-center text-olimpo-dark/50 mt-10 text-sm">
+        <p className="text-center text-olimpo-cream/50 mt-10 text-sm">
           Sem taxas ocultas. Cancele quando quiser.
         </p>
       </div>

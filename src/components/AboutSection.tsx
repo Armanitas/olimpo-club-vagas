@@ -1,6 +1,8 @@
+import logoOlimpo from "@/assets/logo-olimpo.jpg";
+
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-24 section-light relative overflow-hidden">
+    <section id="sobre" className="py-24 section-dark-alt relative overflow-hidden">
       {/* Decorative Greek Temple */}
       <div className="absolute left-0 top-0 bottom-0 w-1/4 opacity-5 pointer-events-none">
         <svg viewBox="0 0 200 800" className="h-full w-full">
@@ -20,7 +22,7 @@ const AboutSection = () => {
             <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
               Nossa Filosofia
             </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-dark mb-6">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
               Sobre o <span className="gold-gradient-text">Olimpo</span>
             </h2>
           </div>
@@ -28,17 +30,17 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div>
-              <p className="text-olimpo-dark/80 text-lg mb-6 leading-relaxed">
+              <p className="text-olimpo-cream/80 text-lg mb-6 leading-relaxed">
                 O nome <strong className="text-olimpo-gold">Olimpo</strong> não foi escolhido por acaso. 
                 Na mitologia grega, o Monte Olimpo era a morada dos deuses — o ponto mais alto, 
                 símbolo de excelência, poder e domínio.
               </p>
-              <p className="text-olimpo-dark/80 text-lg mb-6 leading-relaxed">
+              <p className="text-olimpo-cream/80 text-lg mb-6 leading-relaxed">
                 Assim como os deuses gregos combinavam força com estratégia, nossa comunidade une 
                 <strong className="text-olimpo-gold"> análise técnica rigorosa</strong> com 
                 <strong className="text-olimpo-gold"> disciplina</strong>, método e constância.
               </p>
-              <p className="text-olimpo-dark/80 text-lg leading-relaxed">
+              <p className="text-olimpo-cream/80 text-lg leading-relaxed">
                 Aqui, não vendemos ilusões. Oferecemos um ambiente onde traders sérios podem 
                 evoluir juntos, aprender com profissionais experientes e alcançar seu próprio 
                 topo no mercado financeiro.
@@ -49,15 +51,19 @@ const AboutSection = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-olimpo-gold/10 to-olimpo-gold/5 rounded-2xl p-8 border border-olimpo-gold/20">
                 <div className="text-center">
-                  {/* Omega Symbol */}
-                  <div className="w-32 h-32 rounded-full border-4 border-olimpo-gold flex items-center justify-center mx-auto mb-6">
-                    <span className="font-display text-6xl text-olimpo-gold font-bold">Ω</span>
+                  {/* Logo */}
+                  <div className="w-40 h-40 rounded-full bg-olimpo-dark border-4 border-olimpo-gold/30 flex items-center justify-center mx-auto mb-6 overflow-hidden">
+                    <img 
+                      src={logoOlimpo} 
+                      alt="Olimpo" 
+                      className="w-32 h-32 object-contain"
+                    />
                   </div>
                   
-                  <h3 className="font-display text-2xl font-bold text-olimpo-dark mb-3">
+                  <h3 className="font-display text-2xl font-bold text-olimpo-cream mb-3">
                     Rumo ao Topo
                   </h3>
-                  <p className="text-olimpo-dark/60">
+                  <p className="text-olimpo-cream/60">
                     Com método, disciplina e constância.
                   </p>
                   
