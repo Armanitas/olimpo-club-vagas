@@ -1,5 +1,5 @@
 import { Linkedin, Twitter, Instagram } from "lucide-react";
-import logoOlimpoEquilibrium from "@/assets/logo-olimpo-equilibrium.png";
+import logoOlimpoEquilibrium from "@/assets/logo-equilibrium-olimpo.png";
 
 const founders = [
   {
