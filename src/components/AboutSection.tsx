@@ -1,4 +1,4 @@
-import logoOlimpo from "@/assets/logo-olimpo-new.png";
+import logoOlimpo from "@/assets/logo-olimpo-v2.png";
 
 const AboutSection = () => {
   return (
