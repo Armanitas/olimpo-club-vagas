@@ -46,7 +46,7 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section className="py-24 section-light relative overflow-hidden">
+    <section id="beneficios" className="py-24 section-light relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 golden-ratio-lines opacity-30" />
       
