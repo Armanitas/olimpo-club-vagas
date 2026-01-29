@@ -134,21 +134,21 @@ const PricingSection = () => {
           Sem taxas ocultas. Cancele quando quiser.
         </p>
         
-        {/* Final CTA */}
-        <div className="text-center mt-16 pt-12 border-t border-olimpo-gold/10">
-          <h3 className="font-display text-2xl md:text-3xl font-bold text-olimpo-cream mb-6">
+        {/* Decision Block - Main CTA */}
+        <div className="text-center mt-20 pt-16 pb-8 border-t border-olimpo-gold/20 bg-gradient-to-b from-olimpo-gold/5 to-transparent rounded-3xl mx-auto max-w-2xl">
+          <h3 className="font-display text-3xl md:text-4xl font-bold text-olimpo-cream mb-8">
             Pronto para entrar no Olimpo?
           </h3>
-          <Button variant="gold" size="xl" asChild>
+          <Button variant="gold" size="xl" className="shadow-lg shadow-olimpo-gold/20" asChild>
             <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
               Entrar na comunidade no Discord
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </Button>
-          <p className="text-olimpo-cream/50 text-sm mt-4">
+          <p className="text-olimpo-gold/80 text-sm mt-6 font-medium">
             Acesso imediato após entrar no Discord.
           </p>
-          <p className="text-olimpo-cream/60 text-base mt-2">
+          <p className="text-olimpo-cream/60 text-base mt-3">
             Comece hoje a operar em um ambiente focado em performance.
           </p>
         </div>
