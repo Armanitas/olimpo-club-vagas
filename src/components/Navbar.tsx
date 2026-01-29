@@ -25,7 +25,7 @@ const Navbar = () => {
             <img 
               src={logoOlimpo} 
               alt="Olimpo" 
-              className="h-48 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </a>
 
