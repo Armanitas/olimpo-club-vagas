@@ -1,43 +1,24 @@
-import { Star, TrendingUp, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
-const testimonials = [
-  {
-    name: "Lucas M.",
-    role: "Trader há 2 anos",
-    content: "Desde que entrei no Olimpo, minha consistência mudou completamente. As calls são pontuais e a comunidade é muito séria.",
-    result: "+47% em 3 meses",
-    avatar: "LM",
-  },
-  {
-    name: "Rafael S.",
-    role: "Investidor",
-    content: "O nível das análises é impressionante. Finalmente encontrei um lugar onde posso evoluir de verdade no mercado cripto.",
-    result: "ROI de 156%",
-    avatar: "RS",
-  },
-  {
-    name: "Carolina P.",
-    role: "Day Trader",
-    content: "A mentoria Equilibrium transformou minha forma de operar. Saí da dependência de sinais e hoje tenho autonomia.",
-    result: "Consistência mensal",
-    avatar: "CP",
-  },
-  {
-    name: "Bruno F.",
-    role: "Swing Trader",
-    content: "Os relatórios e insights diários são ouro puro. Vale cada centavo do investimento.",
-    result: "+89% no ano",
-    avatar: "BF",
-  },
-];
-
-const results = [
-  { label: "Média de retorno dos membros", value: "+67%", period: "nos últimos 12 meses" },
-  { label: "Taxa de satisfação", value: "98%", period: "dos membros ativos" },
-  { label: "Membros consistentes", value: "73%", period: "lucro recorrente" },
-];
+// Placeholder for testimonial images - will be replaced with actual images
+const testimonialImages: string[] = [];
 
 const TestimonialsSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => 
+      prev === 0 ? Math.max(0, testimonialImages.length - 1) : prev - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => 
+      prev === testimonialImages.length - 1 ? 0 : prev + 1
+    );
+  };
+
   return (
     <section id="depoimentos" className="py-24 section-dark-alt relative overflow-hidden">
       {/* Background Pattern */}
@@ -61,60 +42,67 @@ const TestimonialsSection = () => {
           </p>
         </div>
         
-        {/* Results Stats */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {results.map((result, index) => (
-            <div
-              key={index}
-              className="bg-olimpo-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-olimpo-gold/10 text-center"
-            >
-              <TrendingUp className="w-8 h-8 text-olimpo-gold mx-auto mb-4" />
-              <p className="text-4xl md:text-5xl font-bold gold-gradient-text mb-2">
-                {result.value}
-              </p>
-              <p className="text-olimpo-cream font-medium mb-1">{result.label}</p>
-              <p className="text-olimpo-cream/50 text-sm">{result.period}</p>
-            </div>
-          ))}
-        </div>
-        
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-olimpo-dark/30 backdrop-blur-sm rounded-2xl p-8 border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300"
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 rounded-full bg-olimpo-gold/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-olimpo-gold font-bold text-lg">{testimonial.avatar}</span>
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-display text-lg font-semibold text-olimpo-cream">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-olimpo-cream/50 text-sm">{testimonial.role}</p>
-                </div>
-                <Quote className="w-8 h-8 text-olimpo-gold/30" />
-              </div>
-              
-              <p className="text-olimpo-cream/80 mb-6 leading-relaxed">
-                "{testimonial.content}"
-              </p>
-              
-              <div className="flex items-center justify-between">
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-olimpo-gold text-olimpo-gold" />
+        {/* Image Carousel */}
+        <div className="relative max-w-4xl mx-auto">
+          {testimonialImages.length > 0 ? (
+            <>
+              {/* Carousel Container */}
+              <div className="relative overflow-hidden rounded-2xl border border-olimpo-gold/20 bg-olimpo-dark/50">
+                <div 
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                >
+                  {testimonialImages.map((image, index) => (
+                    <div key={index} className="w-full flex-shrink-0">
+                      <img 
+                        src={image} 
+                        alt={`Depoimento ${index + 1}`}
+                        className="w-full h-auto"
+                      />
+                    </div>
                   ))}
                 </div>
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-olimpo-gold/10 text-olimpo-gold text-sm font-medium">
-                  <TrendingUp className="w-4 h-4" />
-                  {testimonial.result}
-                </span>
               </div>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={goToPrevious}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-olimpo-dark/80 border border-olimpo-gold/30 flex items-center justify-center text-olimpo-gold hover:bg-olimpo-gold hover:text-olimpo-dark transition-all duration-300"
+                aria-label="Anterior"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                onClick={goToNext}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-olimpo-dark/80 border border-olimpo-gold/30 flex items-center justify-center text-olimpo-gold hover:bg-olimpo-gold hover:text-olimpo-dark transition-all duration-300"
+                aria-label="Próximo"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
+              {/* Dots Indicator */}
+              <div className="flex justify-center gap-2 mt-6">
+                {testimonialImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentIndex 
+                        ? 'bg-olimpo-gold w-8' 
+                        : 'bg-olimpo-gold/30 hover:bg-olimpo-gold/50'
+                    }`}
+                    aria-label={`Ir para depoimento ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </>
+          ) : (
+            <div className="text-center py-16 bg-olimpo-dark/30 rounded-2xl border border-olimpo-gold/10">
+              <p className="text-olimpo-cream/60">
+                Carrossel pronto para receber as imagens dos depoimentos.
+              </p>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </section>
