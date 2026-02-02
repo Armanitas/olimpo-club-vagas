@@ -56,7 +56,7 @@ const TestimonialsSection = () => {
         </div>
         
         {/* Image Carousel */}
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-6xl mx-auto px-16">
           {/* Carousel Container - adapts to image height */}
           <div className="relative overflow-hidden rounded-2xl border border-olimpo-gold/20 bg-olimpo-dark/50">
             {testimonialImages.map((image, index) => (
@@ -70,22 +70,23 @@ const TestimonialsSection = () => {
                   src={image} 
                   alt={`Depoimento ${index + 1}`}
                   className="w-full h-auto"
+                  style={{ transform: 'scale(1.12)', transformOrigin: 'center' }}
                 />
               </div>
             ))}
           </div>
 
-          {/* Navigation Arrows */}
+          {/* Navigation Arrows - positioned at the edges */}
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-olimpo-dark/80 border border-olimpo-gold/30 flex items-center justify-center text-olimpo-gold hover:bg-olimpo-gold hover:text-olimpo-dark transition-all duration-300 z-10"
+            className="absolute -left-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-olimpo-dark/80 border border-olimpo-gold/30 flex items-center justify-center text-olimpo-gold hover:bg-olimpo-gold hover:text-olimpo-dark transition-all duration-300 z-10"
             aria-label="Anterior"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-olimpo-dark/80 border border-olimpo-gold/30 flex items-center justify-center text-olimpo-gold hover:bg-olimpo-gold hover:text-olimpo-dark transition-all duration-300 z-10"
+            className="absolute -right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-olimpo-dark/80 border border-olimpo-gold/30 flex items-center justify-center text-olimpo-gold hover:bg-olimpo-gold hover:text-olimpo-dark transition-all duration-300 z-10"
             aria-label="Próximo"
           >
             <ChevronRight className="w-6 h-6" />
