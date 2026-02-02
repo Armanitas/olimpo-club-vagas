@@ -12,7 +12,7 @@ const InsightsSection = () => {
       </div>
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-[2fr_3fr] gap-12 items-center">
           {/* Text Content */}
           <div>
             <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
@@ -48,8 +48,7 @@ const InsightsSection = () => {
               <img 
                 src={canalDeInsights} 
                 alt="Canal de Insights do Discord" 
-                className="max-w-none"
-                style={{ width: '830px', height: 'auto' }}
+                className="w-full h-auto"
               />
             </div>
             
