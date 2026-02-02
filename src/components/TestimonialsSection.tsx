@@ -56,7 +56,7 @@ const TestimonialsSection = () => {
         </div>
         
         {/* Image Carousel */}
-        <div className="relative max-w-6xl mx-auto px-16">
+        <div className="relative mx-auto px-16" style={{ maxWidth: '90rem' }}>
           {/* Carousel Container - adapts to image height */}
           <div className="relative overflow-hidden rounded-2xl border border-olimpo-gold/20 bg-olimpo-dark/50">
             {testimonialImages.map((image, index) => (
@@ -70,7 +70,6 @@ const TestimonialsSection = () => {
                   src={image} 
                   alt={`Depoimento ${index + 1}`}
                   className="w-full h-auto"
-                  style={{ transform: 'scale(1.12)', transformOrigin: 'center' }}
                 />
               </div>
             ))}
