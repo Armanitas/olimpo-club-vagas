@@ -48,7 +48,8 @@ const InsightsSection = () => {
               <img 
                 src={canalDeInsights} 
                 alt="Canal de Insights do Discord" 
-                className="w-full h-auto"
+                className="max-w-none"
+                style={{ width: '830px', height: 'auto' }}
               />
             </div>
             
