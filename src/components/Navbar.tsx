@@ -49,7 +49,7 @@ const Navbar = () => {
               size="default"
               asChild
             >
-              <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
+              <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
                 Entrar na Comunidade
               </a>
             </Button>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 className="mt-4"
                 asChild
               >
-                <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
+                <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
                   Entrar na Comunidade
                 </a>
               </Button>
