@@ -3,7 +3,7 @@ import logoOlimpoEquilibrium from "@/assets/logo-equilibrium-olimpo.png";
 import pedrocaImage from "@/assets/pedroca.jpeg";
 import maxImage from "@/assets/max.png";
 import enzoImage from "@/assets/enzo.png";
-import richardImage from "@/assets/richard.png";
+import richardImage from "@/assets/richard.jpg";
 
 const founders = [
   {
