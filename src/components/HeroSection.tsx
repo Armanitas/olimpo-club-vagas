@@ -7,33 +7,31 @@ const HeroSection = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 geometric-pattern opacity-50" />
       
-      {/* Decorative Elements */}
       {/* Fibonacci Spiral - Top Right */}
-      <div className="absolute top-24 -right-20 w-80 h-80 animate-float opacity-20">
-        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <div className="absolute top-20 -right-16 w-96 h-60 animate-float opacity-25">
+        <svg viewBox="0 0 340 210" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+          {/* Golden ratio rectangles */}
+          <rect x="10" y="10" width="320" height="190" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" fill="none" />
+          <line x1="10" y1="10" x2="10" y2="200" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
+          <line x1="130" y1="10" x2="130" y2="200" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
+          <line x1="130" y1="127" x2="330" y2="127" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
+          <line x1="130" y1="10" x2="130" y2="127" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
+          <line x1="202" y1="10" x2="202" y2="127" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
+          <line x1="130" y1="82" x2="202" y2="82" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
+          <line x1="175" y1="82" x2="175" y2="127" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
+          <line x1="130" y1="100" x2="175" y2="100" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
+          
+          {/* Fibonacci spiral curve */}
           <path
-            d="M100 100 
-               A 50 50 0 0 1 150 100
-               A 31 31 0 0 1 119 131
-               A 19 19 0 0 1 100 112
-               A 12 12 0 0 1 112 100
-               A 7 7 0 0 1 105 107
-               A 5 5 0 0 1 100 102"
+            d="M 10 200 
+               A 120 120 0 0 0 130 80
+               A 75 75 0 0 0 202 127
+               A 45 45 0 0 0 157 82
+               A 28 28 0 0 0 175 110
+               A 17 17 0 0 0 158 100
+               A 10 10 0 0 0 165 108"
             stroke="currentColor"
-            strokeWidth="1.5"
-            className="text-olimpo-gold"
-            fill="none"
-          />
-          <path
-            d="M100 100
-               A 81 81 0 0 0 19 100
-               A 50 50 0 0 0 69 150
-               A 31 31 0 0 0 100 119
-               A 19 19 0 0 0 81 100
-               A 12 12 0 0 0 93 112
-               A 7 7 0 0 0 100 105"
-            stroke="currentColor"
-            strokeWidth="1.5"
+            strokeWidth="2"
             className="text-olimpo-gold"
             fill="none"
           />
