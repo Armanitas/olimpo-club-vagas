@@ -1,4 +1,5 @@
-import { Linkedin, Instagram } from "lucide-react";
+import { useState } from "react";
+import { Linkedin, Instagram, X } from "lucide-react";
 import logoOlimpoEquilibrium from "@/assets/logo-equilibrium-olimpo.png";
 import pedrocaImage from "@/assets/pedroca.jpeg";
 import maxImage from "@/assets/max.png";
@@ -49,6 +50,8 @@ const founders = [
 ];
 
 const FoundersSection = () => {
+  const [selectedFounder, setSelectedFounder] = useState<typeof founders[0] | null>(null);
+
   return (
     <section id="founders" className="py-16 sm:py-20 lg:py-24 section-dark relative overflow-hidden">
       {/* Background Pattern */}
@@ -78,7 +81,8 @@ const FoundersSection = () => {
           {founders.map((founder, index) => (
             <div
               key={index}
-              className="group relative bg-olimpo-dark-card/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300 hover-lift text-center flex flex-col h-full"
+              onClick={() => setSelectedFounder(founder)}
+              className="group relative bg-olimpo-dark-card/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300 hover-lift text-center flex flex-col h-full cursor-pointer"
             >
               {/* Photo Placeholder */}
               <div className="w-20 h-20 sm:w-32 sm:h-32 mx-auto mb-3 sm:mb-6 rounded-full bg-olimpo-dark border-2 border-olimpo-gold/30 overflow-hidden flex items-center justify-center group-hover:border-olimpo-gold transition-colors duration-300">
@@ -100,12 +104,15 @@ const FoundersSection = () => {
               <h3 className="font-display text-base sm:text-xl font-bold text-olimpo-cream mb-2 sm:mb-4">
                 {founder.name}
               </h3>
-              <p className="text-olimpo-cream/60 text-xs sm:text-sm leading-relaxed flex-grow line-clamp-4 sm:line-clamp-none">
+              <p className="text-olimpo-cream/60 text-xs sm:text-sm leading-relaxed flex-grow line-clamp-3 sm:line-clamp-none">
                 {founder.bio}
               </p>
               
+              {/* Tap indicator on mobile */}
+              <span className="text-olimpo-gold/50 text-[10px] mt-2 sm:hidden">Toque para ver mais</span>
+              
               {/* Social Links */}
-              <div className="flex justify-center gap-3 sm:gap-4 mt-4 sm:mt-6">
+              <div className="flex justify-center gap-3 sm:gap-4 mt-4 sm:mt-6" onClick={(e) => e.stopPropagation()}>
                 <a 
                   href={founder.social.linkedin}
                   target="_blank"
@@ -127,6 +134,66 @@ const FoundersSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal for full bio */}
+      {selectedFounder && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setSelectedFounder(null)}
+        >
+          <div 
+            className="bg-olimpo-dark border border-olimpo-gold/30 rounded-2xl p-6 max-w-md w-full max-h-[80vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedFounder(null)}
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-olimpo-dark/80 border border-olimpo-gold/30 flex items-center justify-center text-olimpo-gold hover:bg-olimpo-gold hover:text-olimpo-dark transition-all duration-300"
+              aria-label="Fechar"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            
+            <div className="text-center">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-olimpo-dark border-2 border-olimpo-gold/30 overflow-hidden">
+                {selectedFounder.image && (
+                  <img 
+                    src={selectedFounder.image} 
+                    alt={selectedFounder.name}
+                    className="w-full h-full object-cover"
+                    style={selectedFounder.imageStyle}
+                  />
+                )}
+              </div>
+              
+              <h3 className="font-display text-xl font-bold text-olimpo-cream mb-4">
+                {selectedFounder.name}
+              </h3>
+              <p className="text-olimpo-cream/70 text-sm leading-relaxed mb-6">
+                {selectedFounder.bio}
+              </p>
+              
+              <div className="flex justify-center gap-4">
+                <a 
+                  href={selectedFounder.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-olimpo-gold/10 flex items-center justify-center text-olimpo-cream/50 hover:text-olimpo-gold hover:bg-olimpo-gold/20 transition-all duration-300"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a 
+                  href={selectedFounder.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-olimpo-gold/10 flex items-center justify-center text-olimpo-cream/50 hover:text-olimpo-gold hover:bg-olimpo-gold/20 transition-all duration-300"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
