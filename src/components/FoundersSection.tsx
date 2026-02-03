@@ -3,20 +3,8 @@ import logoOlimpoEquilibrium from "@/assets/logo-equilibrium-olimpo.png";
 
 const founders = [
   {
-    name: "Fundador 1",
-    role: "Co-Fundador & CEO",
-    bio: "Trader profissional com mais de 8 anos de experiência no mercado cripto.",
-    image: null, // Placeholder para foto
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#",
-    },
-  },
-  {
-    name: "Fundador 2",
-    role: "Co-Fundador & CTO",
-    bio: "Especialista em análise técnica e desenvolvimento de estratégias quantitativas.",
+    name: "Max",
+    bio: "Fundador do Olimpo. Vive o mundo cripto desde 2019.",
     image: null,
     social: {
       linkedin: "#",
@@ -25,9 +13,8 @@ const founders = [
     },
   },
   {
-    name: "Fundador 3",
-    role: "Co-Fundador & Head de Análise",
-    bio: "Responsável pelas análises macro e leitura de cenários globais.",
+    name: "Enzo",
+    bio: "Formado em medicina. Sempre um passo a frente do fed.",
     image: null,
     social: {
       linkedin: "#",
@@ -36,9 +23,18 @@ const founders = [
     },
   },
   {
-    name: "Fundador 4",
-    role: "Co-Fundador & Head de Educação",
-    bio: "Mentor e educador focado em desenvolver traders consistentes.",
+    name: "Richard",
+    bio: "Trader de OrderFlow & Supply/Demand e analista oficial do Olimpo. Mentor do Equilibrium Club.",
+    image: null,
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  },
+  {
+    name: "Pedrocas",
+    bio: "Analista macroeconomico e geopolitico, com passagem no maior banco Suiço de investimentos do mundo. Também mentor do Equilibrium Club.",
     image: null,
     social: {
       linkedin: "#",
@@ -66,7 +62,7 @@ const FoundersSection = () => {
             Quem Somos
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
-            Conheça os <span className="gold-gradient-text">Founders</span>
+            Conheça a <span className="gold-gradient-text">Equipe</span>
           </h2>
           <p className="text-olimpo-cream/60 text-lg max-w-2xl mx-auto">
             Os profissionais por trás do ecossistema Olimpo e Equilibrium.
@@ -96,12 +92,9 @@ const FoundersSection = () => {
               </div>
               
               {/* Info */}
-              <h3 className="font-display text-xl font-bold text-olimpo-cream mb-1">
+              <h3 className="font-display text-xl font-bold text-olimpo-cream mb-4">
                 {founder.name}
               </h3>
-              <p className="text-olimpo-gold text-sm font-medium mb-4">
-                {founder.role}
-              </p>
               <p className="text-olimpo-cream/60 text-sm mb-6 leading-relaxed">
                 {founder.bio}
               </p>
