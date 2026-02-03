@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import depoimento1 from "@/assets/depoimento-1.png";
 import depoimento2 from "@/assets/depoimento-2.png";
@@ -21,17 +21,28 @@ const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     setCurrentIndex((prev) => 
       prev === 0 ? testimonialImages.length - 1 : prev - 1
     );
-  };
+  }, []);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setCurrentIndex((prev) => 
       prev === testimonialImages.length - 1 ? 0 : prev + 1
     );
-  };
+  }, []);
+
+  // Auto-advance timer (15 seconds)
+  useEffect(() => {
+    if (isModalOpen) return; // Pause when modal is open
+    
+    const timer = setInterval(() => {
+      goToNext();
+    }, 15000);
+
+    return () => clearInterval(timer);
+  }, [isModalOpen, goToNext]);
 
   const openModal = () => {
     setIsModalOpen(true);
