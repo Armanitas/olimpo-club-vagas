@@ -32,34 +32,34 @@ const InsightsSection = () => {
   }, [nextSlide]);
 
   return (
-    <section id="insights" className="py-24 section-dark relative overflow-hidden">
+    <section id="insights" className="py-16 sm:py-20 lg:py-24 section-dark relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-64 h-64 border border-olimpo-gold rounded-full" />
-        <div className="absolute bottom-20 right-20 w-48 h-48 border border-olimpo-gold rounded-full" />
+        <div className="absolute top-20 left-10 sm:left-20 w-32 sm:w-64 h-32 sm:h-64 border border-olimpo-gold rounded-full" />
+        <div className="absolute bottom-20 right-10 sm:right-20 w-24 sm:w-48 h-24 sm:h-48 border border-olimpo-gold rounded-full" />
       </div>
       
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-[2fr_3fr] gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-[2fr_3fr] gap-8 lg:gap-12 items-center">
           {/* Text Content */}
-          <div>
-            <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
+          <div className="text-center lg:text-left">
+            <span className="inline-block text-olimpo-gold font-medium text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4">
               Insights em Tempo Real
             </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-4 sm:mb-6">
               Insights diários e operações em{" "}
               <span className="text-olimpo-gold">tempo real</span>
             </h2>
-            <p className="text-olimpo-cream/70 text-lg mb-4 leading-relaxed">
+            <p className="text-olimpo-cream/70 text-base sm:text-lg mb-4 leading-relaxed">
               Todos os dias você recebe análises, ideias de trade e leituras de mercado de diferentes especialistas. 
               Um fluxo contínuo de informações com pontos claros de entrada, saída e invalidação.
             </p>
             
-            <p className="text-olimpo-gold font-medium text-base mb-8 italic border-l-2 border-olimpo-gold pl-4">
+            <p className="text-olimpo-gold font-medium text-sm sm:text-base mb-6 sm:mb-8 italic border-l-2 border-olimpo-gold pl-4 text-left">
               "Você nunca opera sozinho: o mercado é acompanhado em conjunto todos os dias."
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Button variant="gold" size="lg" asChild>
                 <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
                   Entrar na comunidade no Discord
@@ -125,8 +125,8 @@ const InsightsSection = () => {
             </div>
             
             {/* Floating Element - Ao vivo */}
-            <div className="absolute -top-4 -right-4 bg-olimpo-gold text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-float z-20">
-              <Zap className="w-4 h-4 inline mr-1" />
+            <div className="absolute -top-2 sm:-top-4 right-0 sm:-right-4 bg-olimpo-gold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold shadow-lg animate-float z-20">
+              <Zap className="w-3 h-3 sm:w-4 sm:h-4 inline mr-1" />
               Ao vivo
             </div>
           </div>

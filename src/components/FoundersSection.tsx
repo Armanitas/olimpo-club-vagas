@@ -50,38 +50,38 @@ const founders = [
 
 const FoundersSection = () => {
   return (
-    <section id="founders" className="py-24 section-dark relative overflow-hidden">
+    <section id="founders" className="py-16 sm:py-20 lg:py-24 section-dark relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 geometric-pattern opacity-50" />
       
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header with logo */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <img 
             src={logoOlimpoEquilibrium} 
             alt="Olimpo x Equilibrium" 
-            className="h-40 md:h-48 mx-auto mb-8 object-contain rounded-2xl"
+            className="h-28 sm:h-40 md:h-48 mx-auto mb-6 sm:mb-8 object-contain rounded-2xl"
           />
-          <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
+          <span className="inline-block text-olimpo-gold font-medium text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4">
             Quem Somos
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-4 sm:mb-6">
             Conheça a <span className="gold-gradient-text">Equipe</span>
           </h2>
-          <p className="text-olimpo-cream/60 text-lg max-w-2xl mx-auto">
+          <p className="text-olimpo-cream/60 text-base sm:text-lg max-w-2xl mx-auto px-2">
             Os profissionais por trás do ecossistema Olimpo e Equilibrium.
           </p>
         </div>
         
         {/* Founders Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
           {founders.map((founder, index) => (
             <div
               key={index}
-              className="group relative bg-olimpo-dark-card/50 backdrop-blur-sm rounded-2xl p-6 border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300 hover-lift text-center flex flex-col h-full"
+              className="group relative bg-olimpo-dark-card/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300 hover-lift text-center flex flex-col h-full"
             >
               {/* Photo Placeholder */}
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-olimpo-dark border-2 border-olimpo-gold/30 overflow-hidden flex items-center justify-center group-hover:border-olimpo-gold transition-colors duration-300">
+              <div className="w-20 h-20 sm:w-32 sm:h-32 mx-auto mb-3 sm:mb-6 rounded-full bg-olimpo-dark border-2 border-olimpo-gold/30 overflow-hidden flex items-center justify-center group-hover:border-olimpo-gold transition-colors duration-300">
                 {founder.image ? (
                   <img 
                     src={founder.image} 
@@ -90,37 +90,37 @@ const FoundersSection = () => {
                     style={founder.imageStyle}
                   />
                 ) : (
-                  <span className="text-4xl font-bold text-olimpo-gold/50 group-hover:text-olimpo-gold transition-colors duration-300">
+                  <span className="text-2xl sm:text-4xl font-bold text-olimpo-gold/50 group-hover:text-olimpo-gold transition-colors duration-300">
                     {founder.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 )}
               </div>
               
               {/* Info */}
-              <h3 className="font-display text-xl font-bold text-olimpo-cream mb-4">
+              <h3 className="font-display text-base sm:text-xl font-bold text-olimpo-cream mb-2 sm:mb-4">
                 {founder.name}
               </h3>
-              <p className="text-olimpo-cream/60 text-sm leading-relaxed flex-grow">
+              <p className="text-olimpo-cream/60 text-xs sm:text-sm leading-relaxed flex-grow line-clamp-4 sm:line-clamp-none">
                 {founder.bio}
               </p>
               
               {/* Social Links */}
-              <div className="flex justify-center gap-4 mt-6">
+              <div className="flex justify-center gap-3 sm:gap-4 mt-4 sm:mt-6">
                 <a 
                   href={founder.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-olimpo-gold/10 flex items-center justify-center text-olimpo-cream/50 hover:text-olimpo-gold hover:bg-olimpo-gold/20 transition-all duration-300"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-olimpo-gold/10 flex items-center justify-center text-olimpo-cream/50 hover:text-olimpo-gold hover:bg-olimpo-gold/20 transition-all duration-300"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
                 <a 
                   href={founder.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-olimpo-gold/10 flex items-center justify-center text-olimpo-cream/50 hover:text-olimpo-gold hover:bg-olimpo-gold/20 transition-all duration-300"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-olimpo-gold/10 flex items-center justify-center text-olimpo-cream/50 hover:text-olimpo-gold hover:bg-olimpo-gold/20 transition-all duration-300"
                 >
-                  <Instagram className="w-5 h-5" />
+                  <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               </div>
             </div>
