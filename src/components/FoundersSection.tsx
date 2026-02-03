@@ -21,7 +21,7 @@ const founders = [
     name: "Enzo",
     bio: "Médico, Criador de Conteúdo em Cripto, Head de Operações P2P, Soluções de Liquidez para Empresas, analista técnico e macroeconômico, Fundador do Olimpo e sempre um passo a frente dos mercados.",
     image: enzoImage,
-    imageStyle: { transform: 'scale(1.13) translateY(8%)' },
+    imageStyle: {},
     social: {
       linkedin: "#",
       twitter: "#",
