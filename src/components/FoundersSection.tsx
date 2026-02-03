@@ -82,7 +82,7 @@ const FoundersSection = () => {
           {founders.map((founder, index) => (
             <div
               key={index}
-              className="group relative bg-olimpo-dark-card/50 backdrop-blur-sm rounded-2xl p-6 border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300 hover-lift text-center"
+              className="group relative bg-olimpo-dark-card/50 backdrop-blur-sm rounded-2xl p-6 border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300 hover-lift text-center flex flex-col h-full"
             >
               {/* Photo Placeholder */}
               <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-olimpo-dark border-2 border-olimpo-gold/30 overflow-hidden flex items-center justify-center group-hover:border-olimpo-gold transition-colors duration-300">
@@ -104,12 +104,12 @@ const FoundersSection = () => {
               <h3 className="font-display text-xl font-bold text-olimpo-cream mb-4">
                 {founder.name}
               </h3>
-              <p className="text-olimpo-cream/60 text-sm mb-6 leading-relaxed">
+              <p className="text-olimpo-cream/60 text-sm leading-relaxed flex-grow">
                 {founder.bio}
               </p>
               
               {/* Social Links */}
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center gap-4 mt-6">
                 <a 
                   href={founder.social.linkedin}
                   className="w-10 h-10 rounded-full bg-olimpo-gold/10 flex items-center justify-center text-olimpo-cream/50 hover:text-olimpo-gold hover:bg-olimpo-gold/20 transition-all duration-300"
