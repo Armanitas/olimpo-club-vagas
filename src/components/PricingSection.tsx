@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Zap, Calendar, Clock, Star, ArrowRight, Check } from "lucide-react";
 
@@ -45,6 +46,8 @@ const benefits = [
 ];
 
 const PricingSection = () => {
+  const [selectedPlan, setSelectedPlan] = useState(3); // Default to Annual (index 3)
+  
   return (
     <section id="precos" className="py-24 section-light relative overflow-hidden">
       <div className="absolute inset-0 golden-ratio-lines opacity-20" />
@@ -73,54 +76,58 @@ const PricingSection = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`relative rounded-2xl p-6 hover-lift ${
-                plan.highlight
-                  ? "bg-olimpo-gold/10 text-olimpo-cream border-2 border-olimpo-gold shadow-2xl"
-                  : "bg-olimpo-dark/50 text-olimpo-cream border border-olimpo-gold/20 shadow-xl"
-              }`}
-            >
-              {/* Icon */}
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
-                plan.highlight ? "bg-olimpo-gold/20" : "bg-olimpo-gold/10"
-              }`}>
-                <plan.icon className="w-6 h-6 text-olimpo-gold" />
-              </div>
-              
-              {/* Plan Name */}
-              <h3 className="font-display text-xl font-bold mb-4">{plan.name}</h3>
-              
-              {/* Price */}
-              <div className="mb-6">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-sm">R$</span>
-                  <span className="text-4xl font-bold font-display">{plan.price}</span>
-                  {plan.discount && (
-                    <span className="bg-olimpo-gold text-olimpo-dark px-2 py-1 rounded-full text-xs font-bold">
-                      {plan.discount}
-                    </span>
-                  )}
-                </div>
-                <span className="text-olimpo-cream/60 text-sm">
-                  {plan.period}
-                </span>
-              </div>
-              
-              {/* CTA */}
-              <Button
-                variant={plan.highlight ? "gold" : "goldOutline"}
-                size="lg"
-                className="w-full"
-                asChild
+          {plans.map((plan, index) => {
+            const isSelected = selectedPlan === index;
+            return (
+              <div
+                key={index}
+                onClick={() => setSelectedPlan(index)}
+                className={`relative rounded-2xl p-6 hover-lift cursor-pointer transition-all duration-300 ${
+                  isSelected
+                    ? "bg-olimpo-gold/10 text-olimpo-cream border-2 border-olimpo-gold shadow-2xl scale-[1.02]"
+                    : "bg-olimpo-dark/50 text-olimpo-cream border border-olimpo-gold/20 shadow-xl hover:border-olimpo-gold/40"
+                }`}
               >
-                <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
-                  Assinar
-                </a>
-              </Button>
-            </div>
-          ))}
+                {/* Icon */}
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
+                  isSelected ? "bg-olimpo-gold/20" : "bg-olimpo-gold/10"
+                }`}>
+                  <plan.icon className="w-6 h-6 text-olimpo-gold" />
+                </div>
+                
+                {/* Plan Name */}
+                <h3 className="font-display text-xl font-bold mb-4">{plan.name}</h3>
+                
+                {/* Price */}
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-sm">R$</span>
+                    <span className="text-4xl font-bold font-display">{plan.price}</span>
+                    {plan.discount && (
+                      <span className="bg-olimpo-gold text-olimpo-dark px-2 py-1 rounded-full text-xs font-bold">
+                        {plan.discount}
+                      </span>
+                    )}
+                  </div>
+                  <span className="text-olimpo-cream/60 text-sm">
+                    {plan.period}
+                  </span>
+                </div>
+                
+                {/* CTA */}
+                <Button
+                  variant={isSelected ? "gold" : "goldOutline"}
+                  size="lg"
+                  className="w-full"
+                  asChild
+                >
+                  <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
+                    Assinar
+                  </a>
+                </Button>
+              </div>
+            );
+          })}
         </div>
         
         <p className="text-center text-olimpo-cream/50 mt-10 text-sm">
