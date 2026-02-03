@@ -8,7 +8,37 @@ const HeroSection = () => {
       <div className="absolute inset-0 geometric-pattern opacity-50" />
       
       {/* Decorative Elements */}
-      <div className="absolute top-32 right-10 w-32 h-32 border border-olimpo-gold/20 rounded-full animate-float" />
+      {/* Fibonacci Spiral - Top Right */}
+      <div className="absolute -top-20 -right-20 w-80 h-80 animate-float opacity-20">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+          <path
+            d="M100 100 
+               A 50 50 0 0 1 150 100
+               A 31 31 0 0 1 119 131
+               A 19 19 0 0 1 100 112
+               A 12 12 0 0 1 112 100
+               A 7 7 0 0 1 105 107
+               A 5 5 0 0 1 100 102"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="text-olimpo-gold"
+            fill="none"
+          />
+          <path
+            d="M100 100
+               A 81 81 0 0 0 19 100
+               A 50 50 0 0 0 69 150
+               A 31 31 0 0 0 100 119
+               A 19 19 0 0 0 81 100
+               A 12 12 0 0 0 93 112
+               A 7 7 0 0 0 100 105"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="text-olimpo-gold"
+            fill="none"
+          />
+        </svg>
+      </div>
       <div className="absolute bottom-40 left-10 w-20 h-20 border border-olimpo-gold/10 rounded-full animate-float" style={{ animationDelay: "2s" }} />
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
