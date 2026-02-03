@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Instagram } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 import logoOlimpoEquilibrium from "@/assets/logo-equilibrium-olimpo.png";
 import pedrocaImage from "@/assets/pedroca.jpeg";
 import maxImage from "@/assets/max.png";
@@ -12,9 +12,8 @@ const founders = [
     image: maxImage,
     imageStyle: { transform: 'scale(1.1)' },
     social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/max-schiller-876b5a206/",
+      instagram: "https://www.instagram.com/maxjschiller?igsh=YzBxMTYxM3N5YXR2",
     },
   },
   {
@@ -23,9 +22,8 @@ const founders = [
     image: enzoImage,
     imageStyle: {},
     social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/enzo-cobucci-1b3a161b0/",
+      instagram: "https://www.instagram.com/enzocobuccii?igsh=NmJ3eXZpajVqemlw",
     },
   },
   {
@@ -34,9 +32,8 @@ const founders = [
     image: richardImage,
     imageStyle: {},
     social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/richard-stefan-priebsch/",
+      instagram: "https://www.instagram.com/richard__stfn?igsh=dGFnamRqeWtyZmZm",
     },
   },
   {
@@ -45,9 +42,8 @@ const founders = [
     image: pedrocaImage,
     imageStyle: {},
     social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/pedrocarlota/",
+      instagram: "https://www.instagram.com/phcarlota?igsh=MW0zeDNxNGtsZnM5&utm_source=qr",
     },
   },
 ];
@@ -112,18 +108,16 @@ const FoundersSection = () => {
               <div className="flex justify-center gap-4 mt-6">
                 <a 
                   href={founder.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-olimpo-gold/10 flex items-center justify-center text-olimpo-cream/50 hover:text-olimpo-gold hover:bg-olimpo-gold/20 transition-all duration-300"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a 
-                  href={founder.social.twitter}
-                  className="w-10 h-10 rounded-full bg-olimpo-gold/10 flex items-center justify-center text-olimpo-cream/50 hover:text-olimpo-gold hover:bg-olimpo-gold/20 transition-all duration-300"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a 
                   href={founder.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-olimpo-gold/10 flex items-center justify-center text-olimpo-cream/50 hover:text-olimpo-gold hover:bg-olimpo-gold/20 transition-all duration-300"
                 >
                   <Instagram className="w-5 h-5" />

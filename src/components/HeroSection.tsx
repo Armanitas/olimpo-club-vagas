@@ -141,7 +141,7 @@ const HeroSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-olimpo-cream/60">Comunidade ativa</p>
-                  <p className="text-xl font-bold text-olimpo-cream">+500 traders</p>
+                  <p className="text-xl font-bold text-olimpo-cream">+500 membros</p>
                 </div>
               </div>
             </div>
