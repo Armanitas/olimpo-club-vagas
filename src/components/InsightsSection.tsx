@@ -3,11 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Zap, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import canalDeInsights from "@/assets/canal-de-insights.png";
 import insightExemplo2 from "@/assets/insight-exemplo-2.png";
+import insightExemplo3 from "@/assets/insight-exemplo-3.png";
 
 // Array de imagens do carrossel - adicione mais imagens aqui
 const insightImages = [
   { src: canalDeInsights, alt: "Canal de Insights do Discord - Exemplo 1" },
   { src: insightExemplo2, alt: "Canal de Insights do Discord - Análise Macro" },
+  { src: insightExemplo3, alt: "Canal de Insights do Discord - BTC LTF Update" },
 ];
 
 const InsightsSection = () => {
