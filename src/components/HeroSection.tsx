@@ -15,10 +15,6 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-olimpo-gold/30 bg-olimpo-gold/5 mb-6">
-              <div className="w-2 h-2 rounded-full bg-olimpo-gold animate-pulse-gold" />
-              <span className="text-sm text-olimpo-cream/70 font-medium">Comunidade de Elite</span>
-            </div>
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-olimpo-cream leading-tight mb-6">
               Uma comunidade de{" "}
