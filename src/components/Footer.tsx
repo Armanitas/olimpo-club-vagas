@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import logoOlimpo from "@/assets/logo-olimpo-v2.png";
+import logoOlimpo from "@/assets/logo-olimpo-footer.png";
 
 const footerLinks = [
   { href: "#inicio", label: "Início" },
