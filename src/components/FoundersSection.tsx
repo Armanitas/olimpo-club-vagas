@@ -1,5 +1,6 @@
 import { Linkedin, Twitter, Instagram } from "lucide-react";
 import logoOlimpoEquilibrium from "@/assets/logo-equilibrium-olimpo.png";
+import pedrocaImage from "@/assets/pedroca.jpeg";
 
 const founders = [
   {
@@ -35,7 +36,7 @@ const founders = [
   {
     name: "Pedrocas",
     bio: "Analista macroeconomico e geopolitico, com passagem no maior banco Suiço de investimentos do mundo. Também mentor do Equilibrium Club.",
-    image: null,
+    image: pedrocaImage,
     social: {
       linkedin: "#",
       twitter: "#",
