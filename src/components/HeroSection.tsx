@@ -87,23 +87,23 @@ const HeroSection = () => {
       </div>
       <div className="absolute bottom-40 left-10 w-20 h-20 border border-olimpo-gold/10 rounded-full animate-float" style={{ animationDelay: "2s" }} />
       
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left animate-fade-in-up">
             
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-olimpo-cream leading-tight mb-6">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-olimpo-cream leading-tight mb-4 sm:mb-6">
               Uma comunidade de{" "}
               <span className="gold-gradient-text">elite</span>{" "}
               para traders que buscam{" "}
               <span className="gold-gradient-text">performance real</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-olimpo-cream/70 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-olimpo-cream/70 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Análises profissionais, calls ao vivo e um ecossistema completo para evoluir no mercado cripto.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Button variant="gold" size="xl" asChild>
                 <a href="#precos">Ver planos e preços</a>
               </Button>
@@ -114,9 +114,9 @@ const HeroSection = () => {
               </Button>
             </div>
             
-            <div className="mt-8 flex items-center justify-center lg:justify-start gap-3 px-4 py-3 rounded-lg bg-olimpo-gold/10 border border-olimpo-gold/20 max-w-fit">
-              <div className="w-2 h-2 rounded-full bg-olimpo-gold animate-pulse" />
-              <p className="text-sm text-olimpo-gold font-medium">
+            <div className="mt-6 sm:mt-8 flex items-center justify-center lg:justify-start gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-olimpo-gold/10 border border-olimpo-gold/20 max-w-fit mx-auto lg:mx-0">
+              <div className="w-2 h-2 rounded-full bg-olimpo-gold animate-pulse flex-shrink-0" />
+              <p className="text-xs sm:text-sm text-olimpo-gold font-medium">
                 Entradas limitadas e abertas apenas em períodos específicos do ano.
               </p>
             </div>
@@ -134,14 +134,14 @@ const HeroSection = () => {
             </div>
             
             {/* Floating Stats Card */}
-            <div className="absolute -bottom-6 -left-6 bg-olimpo-dark-card p-6 rounded-xl shadow-xl border border-olimpo-gold/20 animate-float">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-olimpo-gold/10 flex items-center justify-center">
-                  <span className="text-2xl">📈</span>
+            <div className="absolute -bottom-4 sm:-bottom-6 left-0 sm:-left-6 bg-olimpo-dark-card p-4 sm:p-6 rounded-xl shadow-xl border border-olimpo-gold/20 animate-float">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-olimpo-gold/10 flex items-center justify-center">
+                  <span className="text-xl sm:text-2xl">📈</span>
                 </div>
                 <div>
-                  <p className="text-sm text-olimpo-cream/60">Comunidade ativa</p>
-                  <p className="text-xl font-bold text-olimpo-cream">+500 membros</p>
+                  <p className="text-xs sm:text-sm text-olimpo-cream/60">Comunidade ativa</p>
+                  <p className="text-lg sm:text-xl font-bold text-olimpo-cream">+500 membros</p>
                 </div>
               </div>
             </div>

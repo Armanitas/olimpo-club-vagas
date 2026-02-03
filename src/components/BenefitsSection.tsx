@@ -46,40 +46,40 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section id="beneficios" className="py-24 section-light relative overflow-hidden">
+    <section id="beneficios" className="py-16 sm:py-20 lg:py-24 section-light relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 golden-ratio-lines opacity-30" />
       
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <span className="inline-block text-olimpo-gold font-medium text-sm tracking-widest uppercase mb-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-10 sm:mb-16">
+          <span className="inline-block text-olimpo-gold font-medium text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4">
             Benefícios Exclusivos
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-4 sm:mb-6">
             O que você encontra no <span className="gold-gradient-text">Olimpo</span>
           </h2>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-olimpo-gold/30 bg-olimpo-gold/5 mb-4">
-            <span className="text-sm text-olimpo-cream/80 font-medium">Para quem quer operar acompanhado todos os dias</span>
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-olimpo-gold/30 bg-olimpo-gold/5 mb-3 sm:mb-4">
+            <span className="text-xs sm:text-sm text-olimpo-cream/80 font-medium">Para quem quer operar acompanhado todos os dias</span>
           </div>
-          <p className="text-olimpo-cream/60 text-lg max-w-2xl mx-auto">
+          <p className="text-olimpo-cream/60 text-base sm:text-lg max-w-2xl mx-auto px-2">
             Um ecossistema completo para evoluir no mercado cripto com profissionais experientes.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group bg-olimpo-dark/50 backdrop-blur-sm p-6 rounded-xl border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300 hover-lift"
+              className="group bg-olimpo-dark/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-olimpo-gold/10 hover:border-olimpo-gold/30 transition-all duration-300 hover-lift"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-olimpo-gold/10 flex items-center justify-center mb-4 group-hover:bg-olimpo-gold/20 transition-colors duration-300">
-                <benefit.icon className="w-7 h-7 text-olimpo-gold" />
+              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-olimpo-gold/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-olimpo-gold/20 transition-colors duration-300">
+                <benefit.icon className="w-5 h-5 sm:w-7 sm:h-7 text-olimpo-gold" />
               </div>
-              <h3 className="font-display text-lg font-semibold text-olimpo-cream mb-2">
+              <h3 className="font-display text-sm sm:text-lg font-semibold text-olimpo-cream mb-1 sm:mb-2">
                 {benefit.title}
               </h3>
-              <p className="text-olimpo-cream/60 text-sm">
+              <p className="text-olimpo-cream/60 text-xs sm:text-sm">
                 {benefit.description}
               </p>
             </div>
