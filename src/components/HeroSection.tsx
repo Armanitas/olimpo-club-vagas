@@ -9,7 +9,7 @@ const HeroSection = () => {
       
       {/* Decorative Elements */}
       {/* Fibonacci Spiral - Top Right */}
-      <div className="absolute -top-20 -right-20 w-80 h-80 animate-float opacity-20">
+      <div className="absolute top-24 -right-20 w-80 h-80 animate-float opacity-20">
         <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
           <path
             d="M100 100 
