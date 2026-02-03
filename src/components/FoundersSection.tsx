@@ -10,6 +10,7 @@ const founders = [
     name: "Max",
     bio: "Fundador do Olimpo. Vive o mundo cripto desde 2019.",
     image: maxImage,
+    imageStyle: { transform: 'scale(1.1)' },
     social: {
       linkedin: "#",
       twitter: "#",
@@ -20,6 +21,7 @@ const founders = [
     name: "Enzo",
     bio: "Formado em medicina. Sempre um passo a frente do fed.",
     image: enzoImage,
+    imageStyle: { transform: 'scale(1.13) translateY(8%)' },
     social: {
       linkedin: "#",
       twitter: "#",
@@ -30,6 +32,7 @@ const founders = [
     name: "Richard",
     bio: "Trader de OrderFlow & Supply/Demand e analista oficial do Olimpo. Mentor do Equilibrium Club.",
     image: richardImage,
+    imageStyle: {},
     social: {
       linkedin: "#",
       twitter: "#",
@@ -40,6 +43,7 @@ const founders = [
     name: "Pedroca",
     bio: "Analista macroeconomico e geopolitico, com passagem no maior banco Suiço de investimentos do mundo. Também mentor do Equilibrium Club.",
     image: pedrocaImage,
+    imageStyle: {},
     social: {
       linkedin: "#",
       twitter: "#",
@@ -87,6 +91,7 @@ const FoundersSection = () => {
                     src={founder.image} 
                     alt={founder.name}
                     className="w-full h-full object-cover"
+                    style={founder.imageStyle}
                   />
                 ) : (
                   <span className="text-4xl font-bold text-olimpo-gold/50 group-hover:text-olimpo-gold transition-colors duration-300">
