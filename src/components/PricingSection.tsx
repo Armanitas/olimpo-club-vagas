@@ -139,10 +139,10 @@ const PricingSection = () => {
           <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-olimpo-cream mb-6 sm:mb-8">
             Pronto para entrar no Olimpo?
           </h3>
-          <Button variant="gold" size="xl" className="shadow-lg shadow-olimpo-gold/20 w-full sm:w-auto" asChild>
-            <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
-              Entrar na comunidade no Discord
-              <ArrowRight className="w-5 h-5 ml-2" />
+          <Button variant="gold" size="xl" className="shadow-lg shadow-olimpo-gold/20 w-full sm:w-auto whitespace-normal h-auto py-3 sm:py-4" asChild>
+            <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+              <span>Entrar na comunidade no Discord</span>
+              <ArrowRight className="w-5 h-5 flex-shrink-0" />
             </a>
           </Button>
           <p className="text-olimpo-gold/80 text-xs sm:text-sm mt-4 sm:mt-6 font-medium">

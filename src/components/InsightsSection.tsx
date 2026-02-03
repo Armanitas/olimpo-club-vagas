@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { Zap, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Zap, ArrowRight, ChevronLeft, ChevronRight, X } from "lucide-react";
 import canalDeInsights from "@/assets/canal-de-insights.png";
 import insightExemplo2 from "@/assets/insight-exemplo-2.png";
 import insightExemplo3 from "@/assets/insight-exemplo-3.png";
@@ -16,6 +16,7 @@ const insightImages = [
 
 const InsightsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [zoomImage, setZoomImage] = useState<string | null>(null);
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % insightImages.length);
@@ -59,8 +60,8 @@ const InsightsSection = () => {
               "Você nunca opera sozinho: o mercado é acompanhado em conjunto todos os dias."
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Button variant="gold" size="lg" asChild>
+            <div className="flex justify-center lg:justify-start">
+              <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
                 <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
                   Entrar na comunidade no Discord
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -80,7 +81,10 @@ const InsightsSection = () => {
               >
                 {insightImages.map((image, index) => (
                   <div key={index} className="w-full flex-shrink-0">
-                    <div className="bg-olimpo-dark/50 backdrop-blur-sm border border-olimpo-gold/20 rounded-2xl overflow-hidden group cursor-pointer">
+                    <div 
+                      className="bg-olimpo-dark/50 backdrop-blur-sm border border-olimpo-gold/20 rounded-2xl overflow-hidden group cursor-pointer"
+                      onClick={() => setZoomImage(image.src)}
+                    >
                       <img 
                         src={image.src} 
                         alt={image.alt} 
@@ -132,6 +136,28 @@ const InsightsSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Zoom Modal */}
+      {zoomImage && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setZoomImage(null)}
+        >
+          <button
+            onClick={() => setZoomImage(null)}
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-olimpo-dark/80 border border-olimpo-gold/30 flex items-center justify-center text-olimpo-gold hover:bg-olimpo-gold hover:text-olimpo-dark transition-all duration-300 z-10"
+            aria-label="Fechar"
+          >
+            <X className="w-5 h-5" />
+          </button>
+          <img 
+            src={zoomImage} 
+            alt="Imagem ampliada" 
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };

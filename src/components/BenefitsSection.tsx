@@ -87,8 +87,8 @@ const BenefitsSection = () => {
         </div>
         
         {/* CTA Button */}
-        <div className="text-center mt-12">
-          <Button variant="gold" size="lg" asChild>
+        <div className="flex justify-center mt-12">
+          <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
             <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
               Entrar na comunidade no Discord
               <ArrowRight className="w-5 h-5 ml-2" />
