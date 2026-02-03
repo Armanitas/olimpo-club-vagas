@@ -30,7 +30,7 @@ const Footer = () => {
               <img 
                 src={logoOlimpo} 
                 alt="Olimpo" 
-                className="h-12 sm:h-16 w-auto object-contain"
+                className="h-16 sm:h-20 w-auto object-contain"
               />
             </div>
             <p className="text-olimpo-cream/60 text-xs sm:text-sm max-w-xs mx-auto sm:mx-0">
