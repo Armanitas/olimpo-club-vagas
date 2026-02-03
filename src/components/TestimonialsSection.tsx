@@ -146,7 +146,7 @@ const TestimonialsSection = () => {
       {/* Modal for zoomed image */}
       {isModalOpen && (
         <div 
-          className="fixed inset-0 z-50 bg-olimpo-dark/95 flex items-start justify-center overflow-auto"
+          className="fixed inset-0 z-50 bg-olimpo-dark/95 flex items-center justify-center overflow-auto"
           onClick={closeModal}
         >
           {/* Close button */}
@@ -174,15 +174,15 @@ const TestimonialsSection = () => {
             <ChevronRight className="w-6 h-6" />
           </button>
 
-          {/* Image container - scrollable and zoomable */}
+          {/* Image container - centered and zoomable */}
           <div 
-            className="p-4 pt-20 pb-8 min-h-screen flex items-start justify-center"
+            className="p-4 flex items-center justify-center max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             <img 
               src={testimonialImages[currentIndex]} 
               alt={`Depoimento ${currentIndex + 1}`}
-              className="max-w-none w-[200%] md:w-full md:max-w-5xl h-auto rounded-lg"
+              className="max-w-[95vw] md:max-w-5xl max-h-[85vh] h-auto w-auto object-contain rounded-lg"
               style={{ touchAction: 'pinch-zoom' }}
             />
           </div>
