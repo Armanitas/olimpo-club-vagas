@@ -89,7 +89,7 @@ const BenefitsSection = () => {
         {/* CTA Button */}
         <div className="text-center mt-12">
           <Button variant="gold" size="lg" asChild>
-            <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
+            <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
               Entrar na comunidade no Discord
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>

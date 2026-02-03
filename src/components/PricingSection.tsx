@@ -121,7 +121,7 @@ const PricingSection = () => {
                   className="w-full"
                   asChild
                 >
-                  <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
+                  <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
                     Assinar
                   </a>
                 </Button>
@@ -140,7 +140,7 @@ const PricingSection = () => {
             Pronto para entrar no Olimpo?
           </h3>
           <Button variant="gold" size="xl" className="shadow-lg shadow-olimpo-gold/20" asChild>
-            <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
+            <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
               Entrar na comunidade no Discord
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>

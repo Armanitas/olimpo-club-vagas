@@ -66,7 +66,7 @@ const Footer = () => {
               Entre para a comunidade e comece sua evolução como trader.
             </p>
             <Button variant="gold" asChild>
-              <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
+              <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
                 Entrar na Comunidade
               </a>
             </Button>

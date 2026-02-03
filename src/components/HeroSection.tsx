@@ -108,7 +108,7 @@ const HeroSection = () => {
                 <a href="#precos">Ver planos e preços</a>
               </Button>
               <Button variant="goldOutline" size="xl" asChild>
-                <a href="https://discord.gg/WnWXEqHD" target="_blank" rel="noopener noreferrer">
+                <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
                   Entrar na comunidade
                 </a>
               </Button>
