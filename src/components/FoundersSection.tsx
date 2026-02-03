@@ -1,12 +1,15 @@
 import { Linkedin, Twitter, Instagram } from "lucide-react";
 import logoOlimpoEquilibrium from "@/assets/logo-equilibrium-olimpo.png";
 import pedrocaImage from "@/assets/pedroca.jpeg";
+import maxImage from "@/assets/max.png";
+import enzoImage from "@/assets/enzo.png";
+import richardImage from "@/assets/richard.png";
 
 const founders = [
   {
     name: "Max",
     bio: "Fundador do Olimpo. Vive o mundo cripto desde 2019.",
-    image: null,
+    image: maxImage,
     social: {
       linkedin: "#",
       twitter: "#",
@@ -16,7 +19,7 @@ const founders = [
   {
     name: "Enzo",
     bio: "Formado em medicina. Sempre um passo a frente do fed.",
-    image: null,
+    image: enzoImage,
     social: {
       linkedin: "#",
       twitter: "#",
@@ -26,7 +29,7 @@ const founders = [
   {
     name: "Richard",
     bio: "Trader de OrderFlow & Supply/Demand e analista oficial do Olimpo. Mentor do Equilibrium Club.",
-    image: null,
+    image: richardImage,
     social: {
       linkedin: "#",
       twitter: "#",
@@ -34,7 +37,7 @@ const founders = [
     },
   },
   {
-    name: "Pedrocas",
+    name: "Pedroca",
     bio: "Analista macroeconomico e geopolitico, com passagem no maior banco Suiço de investimentos do mundo. Também mentor do Equilibrium Club.",
     image: pedrocaImage,
     social: {
