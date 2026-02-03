@@ -90,7 +90,7 @@ const MentoriaSection = () => {
             </p>
             
             <Button variant="gold" size="lg" asChild>
-              <a href="https://whop.com/olimpo-cada/olimpo-premium-assinatura-recorrente/" target="_blank" rel="noopener noreferrer">
+              <a href="https://forms.gle/HvzgJWbEkciufg5n7" target="_blank" rel="noopener noreferrer">
                 Agendar uma call de aplicação
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
