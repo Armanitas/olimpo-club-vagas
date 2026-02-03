@@ -8,30 +8,78 @@ const HeroSection = () => {
       <div className="absolute inset-0 geometric-pattern opacity-50" />
       
       {/* Fibonacci Spiral - Top Right */}
-      <div className="absolute top-20 -right-16 w-96 h-60 animate-float opacity-25">
-        <svg viewBox="0 0 340 210" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <div className="absolute top-0 right-0 w-[800px] h-[600px] animate-float opacity-15 pointer-events-none">
+        <svg viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
           {/* Golden ratio rectangles */}
-          <rect x="10" y="10" width="320" height="190" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" fill="none" />
-          <line x1="10" y1="10" x2="10" y2="200" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
-          <line x1="130" y1="10" x2="130" y2="200" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
-          <line x1="130" y1="127" x2="330" y2="127" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
-          <line x1="130" y1="10" x2="130" y2="127" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
-          <line x1="202" y1="10" x2="202" y2="127" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
-          <line x1="130" y1="82" x2="202" y2="82" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
-          <line x1="175" y1="82" x2="175" y2="127" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
-          <line x1="130" y1="100" x2="175" y2="100" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold/40" />
+          {/* Main outer rectangle */}
+          <rect x="400" y="0" width="400" height="300" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold" fill="none" />
+          {/* Vertical division */}
+          <line x1="647" y1="0" x2="647" y2="300" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold" />
+          {/* Horizontal division in left part */}
+          <line x1="400" y1="153" x2="647" y2="153" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold" />
+          {/* Small squares */}
+          <line x1="400" y1="153" x2="400" y2="300" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold" />
+          <line x1="491" y1="153" x2="491" y2="300" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold" />
+          <line x1="400" y1="244" x2="491" y2="244" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold" />
+          {/* Tiny center squares */}
+          <line x1="456" y1="244" x2="456" y2="300" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold" />
+          <line x1="400" y1="265" x2="456" y2="265" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold" />
+          <line x1="421" y1="244" x2="421" y2="265" stroke="currentColor" strokeWidth="1" className="text-olimpo-gold" />
           
-          {/* Fibonacci spiral curve */}
+          {/* Fibonacci spiral - quarter circle arcs */}
+          {/* Largest arc - sweeps from bottom-left to center-right */}
           <path
-            d="M 10 200 
-               A 120 120 0 0 0 130 80
-               A 75 75 0 0 0 202 127
-               A 45 45 0 0 0 157 82
-               A 28 28 0 0 0 175 110
-               A 17 17 0 0 0 158 100
-               A 10 10 0 0 0 165 108"
+            d="M 400 600 A 300 300 0 0 1 100 300"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="1.5"
+            className="text-olimpo-gold"
+            fill="none"
+          />
+          {/* Second arc */}
+          <path
+            d="M 400 300 A 153 153 0 0 1 647 153"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="text-olimpo-gold"
+            fill="none"
+          />
+          {/* Third arc */}
+          <path
+            d="M 491 153 A 94 94 0 0 1 400 244"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="text-olimpo-gold"
+            fill="none"
+          />
+          {/* Fourth arc */}
+          <path
+            d="M 400 244 A 56 56 0 0 1 456 300"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="text-olimpo-gold"
+            fill="none"
+          />
+          {/* Fifth arc */}
+          <path
+            d="M 456 300 A 35 35 0 0 1 491 265"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="text-olimpo-gold"
+            fill="none"
+          />
+          {/* Sixth arc */}
+          <path
+            d="M 491 265 A 21 21 0 0 1 470 244"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="text-olimpo-gold"
+            fill="none"
+          />
+          {/* Tiny arc */}
+          <path
+            d="M 421 244 A 13 13 0 0 1 434 257"
+            stroke="currentColor"
+            strokeWidth="1.5"
             className="text-olimpo-gold"
             fill="none"
           />
