@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Zap, Calendar, Clock, Star, ArrowRight } from "lucide-react";
+import { Zap, Calendar, Clock, Star, ArrowRight, Check } from "lucide-react";
 
 const plans = [
   {
@@ -35,6 +35,15 @@ const plans = [
   },
 ];
 
+const benefits = [
+  "Acesso às calls semanais",
+  "Canais de insights diários",
+  "Operações dos traders",
+  "Curso completo de análise gráfica",
+  "Chats exclusivos para dúvidas",
+  "Relatórios internacionais",
+];
+
 const PricingSection = () => {
   return (
     <section id="precos" className="py-24 section-light relative overflow-hidden">
@@ -48,9 +57,19 @@ const PricingSection = () => {
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-olimpo-cream mb-6">
             Escolha seu <span className="gold-gradient-text">plano</span>
           </h2>
-          <p className="text-olimpo-cream/60 text-lg max-w-2xl mx-auto">
+          <p className="text-olimpo-cream/60 text-lg max-w-2xl mx-auto mb-8">
             Todos os planos incluem acesso completo a toda a estrutura do Olimpo.
           </p>
+          
+          {/* Benefits List */}
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 max-w-4xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <Check className="w-5 h-5 text-olimpo-gold flex-shrink-0" />
+                <span className="text-olimpo-cream/80 text-sm">{benefit}</span>
+              </div>
+            ))}
+          </div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
