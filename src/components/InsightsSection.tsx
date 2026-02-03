@@ -1,8 +1,32 @@
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { Zap, ArrowRight } from "lucide-react";
+import { Zap, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import canalDeInsights from "@/assets/canal-de-insights.png";
 
+// Array de imagens do carrossel - adicione mais imagens aqui
+const insightImages = [
+  { src: canalDeInsights, alt: "Canal de Insights do Discord - Exemplo 1" },
+  { src: canalDeInsights, alt: "Canal de Insights do Discord - Exemplo 2" },
+  { src: canalDeInsights, alt: "Canal de Insights do Discord - Exemplo 3" },
+];
+
 const InsightsSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % insightImages.length);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + insightImages.length) % insightImages.length);
+  }, []);
+
+  // Auto-rotate every 8 seconds
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 8000);
+    return () => clearInterval(timer);
+  }, [nextSlide]);
+
   return (
     <section id="insights" className="py-24 section-dark relative overflow-hidden">
       {/* Background Elements */}
@@ -41,19 +65,63 @@ const InsightsSection = () => {
             </div>
           </div>
           
-          {/* Visual - Image */}
+          {/* Visual - Carousel */}
           <div className="relative">
-            {/* Main Card with Image */}
-            <div className="bg-olimpo-dark/50 backdrop-blur-sm border border-olimpo-gold/20 rounded-2xl overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-500">
-              <img 
-                src={canalDeInsights} 
-                alt="Canal de Insights do Discord" 
-                className="w-full h-auto"
-              />
+            {/* Carousel Container */}
+            <div className="relative overflow-hidden rounded-2xl">
+              {/* Images */}
+              <div 
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                {insightImages.map((image, index) => (
+                  <div key={index} className="w-full flex-shrink-0">
+                    <div className="bg-olimpo-dark/50 backdrop-blur-sm border border-olimpo-gold/20 rounded-2xl overflow-hidden group cursor-pointer">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt} 
+                        className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Navigation Arrows */}
+              <button 
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-olimpo-dark/80 border border-olimpo-gold/30 flex items-center justify-center text-olimpo-gold hover:bg-olimpo-gold hover:text-olimpo-dark transition-all duration-300 z-10"
+                aria-label="Imagem anterior"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button 
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-olimpo-dark/80 border border-olimpo-gold/30 flex items-center justify-center text-olimpo-gold hover:bg-olimpo-gold hover:text-olimpo-dark transition-all duration-300 z-10"
+                aria-label="Próxima imagem"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center gap-2 mt-4">
+              {insightImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentIndex 
+                      ? "bg-olimpo-gold w-6" 
+                      : "bg-olimpo-gold/30 hover:bg-olimpo-gold/50"
+                  }`}
+                  aria-label={`Ir para imagem ${index + 1}`}
+                />
+              ))}
             </div>
             
             {/* Floating Element - Ao vivo */}
-            <div className="absolute -top-4 -right-4 bg-olimpo-gold text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-float">
+            <div className="absolute -top-4 -right-4 bg-olimpo-gold text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-float z-20">
               <Zap className="w-4 h-4 inline mr-1" />
               Ao vivo
             </div>
