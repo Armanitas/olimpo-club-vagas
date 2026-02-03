@@ -41,7 +41,7 @@ const founders = [
   },
   {
     name: "Pedroca",
-    bio: "Analista macroeconomico e geopolitico, com passagem no maior banco Suiço de investimentos do mundo. Também mentor do Equilibrium Club.",
+    bio: "Economista | Trader | Analista macroeconômico e geopolítico. Ex-analista do banco UBS Swiss. Mentor do Equilibrium Club.",
     image: pedrocaImage,
     imageStyle: {},
     social: {
