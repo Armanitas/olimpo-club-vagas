@@ -30,7 +30,7 @@ const founders = [
   },
   {
     name: "Richard",
-    bio: "Trader de OrderFlow & Supply/Demand e analista oficial do Olimpo. Mentor do Equilibrium Club.",
+    bio: "Engenheiro Mecânico, Trader de OrderFlow & Supply/Demand a 5 anos e analista oficial do Olimpo. Mentor do Equilibrium Club.",
     image: richardImage,
     imageStyle: {},
     social: {
